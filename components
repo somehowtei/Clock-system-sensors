@@ -1,6 +1,17 @@
+DHT module:
+  S - digital(D7)
+  VCC - 5V
+  GND  - GND Arduino
+
 Gas module: Figaro SM-02
   VCC- 5V
   Vout-A0
   Vref-A1
   GND-GND Arduino
   GND-GND Arduino
+
+RTC module
+SCL - A5
+SDA - A4
+VCC - 5V
+GND - GND Arduino
