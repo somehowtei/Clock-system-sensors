@@ -1,31 +1,33 @@
-int readpin=A0;
-int redpin=8;
-int greenpin=7;
-int readval;
-float val;
-float val_med=2;
-int time=100;
-void setup() {
-  // put your setup code here, to run once:
+int GasPin=A0;
+int RedPin=2;
+int GreenPin=4;
+int ReadVal;
+float GasVal;
+void setup() 
+{
   Serial.begin(9600);
-  pinMode(redpin, OUTPUT);
-  pinMode(greenpin, OUTPUT);
+  pinMode(GasPin, INPUT);
+  pinMode(RedPin, OUTPUT);
+  pinMode(GreenPin, OUTPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  readval=analogRead(readpin);
-  val=5./1023.*readval;
-  Serial.println(val);
-  if(val<val_med)
+void loop() 
+{
+  ReadVal=analogRead(GasPin);
+  GasVal=5./1023.*ReadVal;
+  Serial.print("Gas: ");
+  Serial.println(GasVal, 2); // 2 zecimale
+  
+  if(GasVal<3)
   {
-    digitalWrite(redpin, LOW);
-    digitalWrite(greenpin, HIGH);
+    digitalWrite(GreenPin, HIGH);
+    digitalWrite(RedPin, LOW);
   }
   else
   {
-    digitalWrite(greenpin, LOW);
-    digitalWrite(redpin, HIGH);
+    digitalWrite(GreenPin, LOW);
+    digitalWrite(RedPin, HIGH);
   }
-  delay(time);
+
+  delay(200);
 }
