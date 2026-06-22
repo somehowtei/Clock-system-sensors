@@ -11,7 +11,7 @@ void setup()
     while (1);
   }
 
-  rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+  //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 }
 
 void loop() 
@@ -29,5 +29,5 @@ void loop()
   Serial.print(":");
   Serial.println(now.second());
 
-  delay(200);
+  delay(1000);
 }
