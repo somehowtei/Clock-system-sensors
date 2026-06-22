@@ -54,17 +54,18 @@ void loop()
   Serial.print("Humidity: ");
   Serial.print(humidity);
   Serial.print("%");
-  Serial.print(" ");
+  Serial.print("  ");
   Serial.print("Temperature: ");
   Serial.print(temperature);
   Serial.print("*C");
   Serial.print("    ");
 
   ReadVal=analogRead(GasPin);
-  GasVal=5./1023.*ReadVal;
+  GasVal=100./1023.*ReadVal;
   Serial.print("Gas: ");
-  Serial.println(GasVal, 2); // 2 zecimale
-  if(GasVal<3)
+  Serial.print(GasVal, 2); // 2 zecimale
+  Serial.println("%");
+  if(GasVal<20)
   {
     digitalWrite(GreenPin, HIGH);
     digitalWrite(RedPin, LOW);
