@@ -8,7 +8,8 @@ void setup() {
   dht.begin();  
 }
 
-void loop() {
+void loop() 
+{
   float humidity = dht.readHumidity();
   float temperature = dht.readTemperature();
 
@@ -20,5 +21,5 @@ void loop() {
   Serial.print(temperature);
   Serial.println(" *C");
 
-  delay(500);
+  delay(200);
 }
