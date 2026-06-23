@@ -17,3 +17,5 @@ RTC module
   SDA - A4
   VCC - 5V
   GND - GND Arduino
+
+LCD
