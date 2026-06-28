@@ -1,12 +1,11 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include "RTClib.h"
-LiquidCrystal_I2C lcd(0x27, 16, 2);
-RTC_DS3231 rtc;
-
 #include <DHT.h>
 #define DHTPIN 7
 #define DHTTYPE DHT11
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+RTC_DS3231 rtc;
 DHT dht(DHTPIN, DHTTYPE);
 
 int mode=0;
@@ -42,7 +41,6 @@ void printval(float number) //functie pt valori
 
 void setup() 
 {
-  Serial.begin(9600);
   lcd.init();
   lcd.backlight();
 
@@ -83,12 +81,8 @@ void loop()
     mode=3;
   }
 
-  Serial.print(button_rtc_val);
-  Serial.print(button_dht_val);
-  Serial.println(button_gas_val);
-
   lcd.clear();
-  
+
   if(mode==0)
   {
     lcd.setCursor(0,0);
