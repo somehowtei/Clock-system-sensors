@@ -24,6 +24,15 @@ LCD:
   SDA-A4
   SCL-A5
 
+Button RTC:
+  D8
+
+Button DHT:
+  D9
+
+Button Gas:
+  D10
+
 Red LED:
   D2
 
