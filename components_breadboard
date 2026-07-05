@@ -4,7 +4,7 @@ DHT module:
   GND-GND Arduino
 
 Gas module: Figaro SM-02
-  VCC- 5V
+  VCC-5V
   Vout-A0
   Vref-A1
   GND-GND Arduino
