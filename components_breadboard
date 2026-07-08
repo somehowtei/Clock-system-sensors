@@ -26,15 +26,20 @@ LCD:
 
 Button RTC:
   D8
+  GND Arduino
 
 Button DHT:
   D9
+  GND Arduino
 
 Button Gas:
   D10
+  GND Arduino
 
 Red LED:
   D2
+  GND Arduino
 
 Green LED:
   D4
+  GND Arduino
