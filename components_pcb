@@ -19,9 +19,9 @@ RTC module:
   GND-GND Arduino
 
 LCD:
-  GND
+  GND(VSS)-GND
   VDD-5V
-  Vo-potentiometer 10k
+  VO-potentiometer 10k
   RS-D12
   RW-GND
   E-D11
@@ -33,25 +33,25 @@ LCD:
   D5-D4
   D6-D3
   D7-D2
-  BLA-5V+resistor
-  BLK-GND from resistor
+  BLA(A)-5V+resistor
+  BLK(K)-GND from resistor
 
 Button RTC:
   D8
-  GND
+  GND Arduino
 
 Button DHT:
   D9
-  GND
+  GND Arduino
 
 Button Gas:
   D10
-  GND
+  GND Arduino
 
 Red LED:
   D2
-  GND
+  GND Arduino
 
 Green LED:
   D4
-  GND
+  GND Arduino
