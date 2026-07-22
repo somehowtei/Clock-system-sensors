@@ -21,7 +21,7 @@ int GreenPin=4;
 int ReadVal;
 float GasVal;
 
-void printclock(int number) //functie pt ceas
+void printclock(int number) //func for clock
 {
   if(number<10)
   {
@@ -30,7 +30,7 @@ void printclock(int number) //functie pt ceas
   lcd.print(number);
 }
 
-void printval(float number) //functie pt valori
+void printval(float number) //func for values
 {
   if(number<10)
   {
@@ -95,14 +95,14 @@ void loop()
 
   if(mode==1)
   {
-    lcd.setCursor(0,0); //pe prima linie a LCD-ului
+    lcd.setCursor(0,0); //first  line for LCD
     lcd.print("Day:");
     printclock(now.day());
     lcd.print("/");
     printclock(now.month());
     lcd.print("/");
     printclock(now.year());
-    lcd.setCursor(0,1); //pe randul urmator
+    lcd.setCursor(0,1); //next line
     lcd.print("Time:");
     printclock(now.hour());
     lcd.print(":");
